@@ -1,0 +1,68 @@
+<mat-card>
+    <h4 style="font-weight: 500;">Add new book record</h4>
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Book Name</mat-label>
+            <input matInput  name="name"
+            formControlName="name" placeholder="Book Name" required>
+            <mat-icon matSuffix>book</mat-icon>
+            <mat-hint>Enter book name</mat-hint>
+          </mat-form-field>        
+        </div>
+        <div class="form-group">
+          <mat-form-field  class="example-full-width"  appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea matInput  name="author" 
+            formControlName="description" placeholder="Description" required></textarea>
+            <mat-icon matSuffix>Des</mat-icon>
+            <mat-hint>Enter Description</mat-hint>
+          </mat-form-field>        
+        </div>
+        <div class="form-group">
+          <mat-form-field  class="example-full-width"  appearance="outline">
+            <mat-label>Author</mat-label>
+            <input matInput  name="author" 
+            formControlName="author" placeholder="Author Name" required>
+            <mat-icon matSuffix>man</mat-icon>
+            <mat-hint>Enter author name</mat-hint>
+          </mat-form-field>        
+        </div>
+       <div class="form-group">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Select Category</mat-label>
+          <mat-select  name="genre" formControlName="genre">
+          <mat-option selected>Category</mat-option>
+            <mat-option value="Novel" >Novel</mat-option>
+            <mat-option value="Science Fiction">Science Fiction</mat-option>
+            <mat-option value="Biography">Biography</mat-option>
+            <mat-option value="Technology">Technology</mat-option>
+          </mat-select>
+        </mat-form-field>
+        </div>
+
+        <div class="form-group">
+          <mat-form-field  class="example-full-width"  appearance="outline">
+            <mat-label>Date Published</mat-label>
+            <input matInput type="date"  name="author" 
+            formControlName="date" placeholder="Date" required>
+            <mat-icon matSuffix>date</mat-icon>
+            <mat-hint>Enter Date of Publishion</mat-hint>
+          </mat-form-field>        
+        </div>
+
+  
+        <div class="form-group">
+          <mat-form-field class="example-full-width" appearance="outline" floatLabel="always">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" name="price" formControlName="price">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+          </div>
+  
+          <div class="form-group">
+            <button type="submit" mat-raised-button color="primary" [disabled]="!bookForm.valid" [disabled]="bookForm.invalid">Add Book</button>
+          </div>
+    </form>
+  </mat-card>

@@ -1,0 +1,57 @@
+<div *ngIf="book" class="container p-4" style="width:100%">
+    <h4 mat-dialog-title style="font-weight: 500;">Edit Your Record </h4>
+    <form [formGroup]="bookForm" (ngSubmit)="onUpdate()">
+      <div class="form-group">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Book Name</mat-label>
+            <input matInput  name="name"
+            formControlName="name" placeholder="Book Name" required>
+            <mat-icon matSuffix>book</mat-icon>
+            <mat-hint>Enter book name</mat-hint>
+          </mat-form-field>        
+        </div>
+        <div class="form-group">
+          <mat-form-field  class="example-full-width"  appearance="outline">
+            <mat-label>Description</mat-label>
+            <textarea matInput  name="author" 
+            formControlName="description" placeholder="Description" required></textarea>
+            <mat-icon matSuffix>Des</mat-icon>
+            <mat-hint>Enter Description</mat-hint>
+          </mat-form-field>        
+        </div>
+        <div class="form-group">
+          <mat-form-field  class="example-full-width"  appearance="outline">
+            <mat-label>Author</mat-label>
+            <input matInput  name="author" 
+            formControlName="author" placeholder="Author Name" required>
+            <mat-icon matSuffix>man</mat-icon>
+            <mat-hint>Enter author name</mat-hint>
+          </mat-form-field>        
+        </div>
+       
+        <div class="form-group">
+          <mat-form-field  class="example-full-width"  appearance="outline">
+            <mat-label>Date Published</mat-label>
+            <input matInput type="date"  name="author" 
+            formControlName="date" placeholder="Date" required>
+            <mat-icon matSuffix>date</mat-icon>
+            <mat-hint>Enter Date of Publishion</mat-hint>
+          </mat-form-field>        
+        </div>
+
+  
+        <div class="form-group">
+          <mat-form-field class="example-full-width" appearance="outline" floatLabel="always">
+            <mat-label>Amount</mat-label>
+            <input matInput type="number" class="example-right-align" placeholder="0" name="price" formControlName="price">
+            <span matPrefix>$&nbsp;</span>
+            <span matSuffix>.00</span>
+          </mat-form-field>
+          </div>
+  
+          <div class="form-group">
+            <button type="submit" mat-raised-button color="primary">Add Book</button>
+          </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+html, body { height: 100%; background: #f7f7f7;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.mat-form-field-appearance-outline .mat-form-field-prefix, .mat-form-field-appearance-outline .mat-form-field-suffix {
+    top:0.5px !important;
+}

@@ -1,0 +1,33 @@
+.example-full-width{
+    width:100% !important;
+}
+
+select{
+    width: 100% !important;
+    height: 50px !important;
+    border: 1px solid #d9d9d9 !important;
+    border-radius: 4px !important;
+    padding: 0 0.75em 0 0.75em !important;
+    margin-top: -0.25em !important;
+    position: relative !important;
+}
+.label{
+    font-size: 11px !important;
+    margin: 0px 11px !important;
+    padding: 0px 6px !important;
+    position: relative !important;
+    top: 7px !important;
+    z-index: 1 !important;
+    background: #fff !important;
+
+}
+
+option{
+    padding: 10px 0px !important;
+    font-size: inherit !important;
+    line-height: 3em !important;
+    height: 3em !important;
+    background: rgba(0,0,0,.04) !important;
+    color: rgba(0,0,0,.87) !important;
+
+}
